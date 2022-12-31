@@ -1,0 +1,23 @@
+﻿@model MvcPractice.Models.Student
+@{
+    ViewBag.Title = "Add";
+}
+
+@using (Html.BeginForm("Add","Emp",FormMethod.Post)) {
+<table>
+    @Html.HiddenFor(x=>x.Id)
+    <tr>
+        <th>Name</th>
+        <td>@Html.TextBoxFor(x => x.Name)</td>
+    </tr>
+    <tr>
+        <th>Age</th>
+        <td>@Html.TextBoxFor(x => x.Age)</td>
+    </tr>
+    <tr>
+        
+        <td><input type="submit" value="@ViewBag.vb"/></td>
+    </tr>
+</table>
+}
+
